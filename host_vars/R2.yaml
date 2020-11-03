@@ -1,0 +1,24 @@
+native:
+  _xmlns: http://cisco.com/ns/yang/Cisco-IOS-XE-native
+  vrf:
+    _operation: replace
+    definition:
+      - name: MGMT
+        address-family:
+          ipv4: null
+          ipv6: null
+      - name: CISCO
+        address-family:
+          ipv4: null
+          ipv6: null
+
+  router:
+    _operation: replace
+    eigrp:
+     _xmlns: "http://cisco.com/ns/yang/Cisco-IOS-XE-eigrp"
+     id: 1
+     eigrp:
+      "router-id": "2.2.2.2"
+     network:
+      - number: "192.168.2.0"
+      - number: "10.0.0.0"
